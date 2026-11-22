@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-Demo – Namnlista</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <h1>JS-Demo</h1>
+    <p class="intro">Lägg till ett namn i listan under!</p>
+
+    <!-- Listan fylls med innehållet från JavaScript-arrayen. -->
+    <ul id="name-list" class="name-list" aria-label="Namnlista"></ul>
+
+    <form id="add-form" autocomplete="off">
+      <label class="visually-hidden" for="name-input">Namnet på personen</label>
+      <input
+        id="name-input"
+        name="name"
+        type="text"
+        placeholder="Namnet på personen"
+        maxlength="60"
+        required
+      >
+
+      <div class="actions">
+        <button type="submit" class="button button-add">Lägg till</button>
+        <button type="button" id="reset-button" class="button button-reset">Nollställ</button>
+      </div>
+    </form>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+  </main>
+</body>
+</html>

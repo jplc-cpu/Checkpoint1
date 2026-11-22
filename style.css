@@ -1,0 +1,244 @@
+/* Grundlayout CSS, utan ramverk. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #25292d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  width: min(466px, calc(100% - 36px));
+  margin: 16px auto 42px;
+}
+
+h1 {
+  margin: 0 0 14px;
+  font-size: clamp(2.8rem, 8vw, 3.7rem);
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  line-height: 1.18;
+}
+
+.intro {
+  margin: 0 0 27px;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.name-list {
+  list-style: none;
+  margin: 0 0 38px;
+  padding: 0;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.name-row {
+  min-height: 63px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 23px 7px 36px;
+  font-size: 1.5rem;
+}
+
+.name-row + .name-row {
+  border-top: 1px solid #dedede;
+}
+
+.name-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.row-actions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 23px;
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.edit-button {
+  color: #229a3a;
+  font-size: 1.8rem;
+}
+
+.remove-button {
+  color: #ff4750;
+  font-size: 1.5rem;
+}
+
+.remove-symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23px;
+  height: 23px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  line-height: 1;
+  padding-bottom: 2px;
+}
+
+#name-input,
+.edit-input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 14px 18px;
+  border: 2px solid #d9dfe4;
+  border-radius: 5px;
+  outline-offset: 2px;
+  color: #25292d;
+  background: #fff;
+  font: inherit;
+  font-size: 1.5rem;
+}
+
+#name-input::placeholder {
+  color: #7a858f;
+  opacity: 1;
+}
+
+#name-input:focus,
+.edit-input:focus {
+  border-color: #2377df;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.button {
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font: inherit;
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+
+.button-add {
+  background: #1675f8;
+}
+
+.button-add:hover {
+  background: #085bc8;
+}
+
+.button-reset {
+  background: #df3544;
+}
+
+.button-reset:hover {
+  background: #bf2432;
+}
+
+.edit-form {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 8px 9px;
+  font-size: 1.1rem;
+}
+
+.small-button {
+  flex-shrink: 0;
+  padding: 9px 8px;
+  border: 0;
+  border-radius: 4px;
+  background: #229a3a;
+  color: #fff;
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.small-button.cancel {
+  background: #697680;
+}
+
+.empty-state {
+  justify-content: center;
+  padding: 20px 14px;
+  color: #626d75;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.status {
+  margin: 12px 0 0;
+  min-height: 1.3em;
+  font-size: 0.95rem;
+  color: #505e67;
+}
+
+button:focus-visible {
+  outline: 3px solid #174eac;
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 380px) {
+  .intro {
+    font-size: 1.22rem;
+  }
+
+  .name-row {
+    padding-left: 16px;
+    padding-right: 14px;
+  }
+
+  .row-actions {
+    gap: 12px;
+  }
+
+  .edit-form {
+    flex-wrap: wrap;
+    padding: 6px 0;
+  }
+
+  .edit-input {
+    flex-basis: 100%;
+  }
+}
